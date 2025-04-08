@@ -1,0 +1,9 @@
+[build]
+  functions = "netlify/functions"
+
+[dev]
+  command = "vite"
+  targetPort = 5173
+  port = 8888
+  functions = "netlify/functions"
+  framework = "vite"
