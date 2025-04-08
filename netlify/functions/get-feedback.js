@@ -3,7 +3,6 @@ import { connectToDatabase } from './utils/db';
 export const handler = async (event) => {
   let client;
 
-  // Handle OPTIONS request for CORS
   if (event.httpMethod === 'OPTIONS') {
     return {
       statusCode: 200,

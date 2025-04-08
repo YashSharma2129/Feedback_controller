@@ -5,7 +5,6 @@ let cachedDb = null;
 
 export async function connectToDatabase() {
   if (cachedDb && cachedClient) {
-    // Verify if connection is still alive
     try {
       await cachedClient.db().admin().ping();
       console.log("Using cached database connection");
@@ -36,7 +35,6 @@ export async function connectToDatabase() {
 
     const db = client.db(process.env.MONGODB_DB);
     
-    // Test the connection
     await db.command({ ping: 1 });
     
     cachedClient = client;
